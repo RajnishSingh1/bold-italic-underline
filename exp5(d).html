@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    
+    body{
+      background-color:  #121212;
+      color: white;
+    }
+    h1{
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    .textcontainer{
+      text-align: center;
+    }
+    .containerbutton{
+      width: 100%;
+      text-align: center;
+    }
+     .textarea{
+      background-color: #242424;
+     font-size:25px;
+     font-family: Arial;
+     color: white;
+     width: 1200px;
+     height: 600px;
+      margin-top: 20px;
+      align-items: center;
+      padding: 40px 60px;
+    }
+    
+      
+    .bold{
+      font-weight: bold;
+    }
+    .italic{
+      font-style: italic;
+    }
+    .underline{
+       text-decoration: underline;
+    }
+    .rbold{
+      font-weight: normal;
+    }
+    .ritalic{
+      font-style: normal;
+    }
+    .runderline{
+      text-decoration: none;
+    }
+    button{
+      padding: 8px 10px;
+      border: none;
+      background-color:lightgreen ;
+      font-family: Arial;
+      margin-right: 5px;
+      font-size: 15px;
+      border-radius: 15px;
+      cursor: pointer;
+      width: 100px;
+      font-weight:500;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Experiment-5(d)</h1>
+   <div class="containerbutton">
+  <button onclick="  makebold(); " class="bold"><b>Bold</b></button>
+  <button onclick=" makeitalic();   " class="italic"><i>Italic</i></button>
+  <button onclick=" makeunderline() " class="underline"><u>Underline</u></button>
+  <button onclick=" rbold()  " class="rbold">Rbold</button>
+  <button onclick=" ritalic(); " class="ritalic">Ritalic</button>
+  <button onclick=" runderline() " class="runderline">Runderline</button>
+</div>
+<div class="textcontainer">
+    <textarea name="textarea" id="textareaa"  class="textarea"></textarea>
+    <!-- <input type="text" id="textarea" class="textarea" size="100px"> -->
+  </div>
+
+  <script>
+    // const change = document.querySelector('.textarea').style;
+    // change.fontWeight ='bold'
+    var element =  document.querySelector('.textarea').style;
+      function makebold(){
+      element.fontWeight='bold';
+      document.querySelector('.bold').style.backgroundColor='lightcoral'
+      document.querySelector('.rbold').style.backgroundColor='lightgreen'
+      }
+      function makeitalic(){
+        element.fontStyle="italic";
+        document.querySelector('.italic').style.backgroundColor='lightcoral'
+      document.querySelector('.ritalic').style.backgroundColor='lightgreen'
+      }
+      function makeunderline(){
+        element.textDecoration="underline";
+        document.querySelector('.underline').style.backgroundColor='lightcoral'
+      document.querySelector('.runderline').style.backgroundColor='lightgreen'
+      }
+      
+      function rbold(){
+        element.fontWeight='normal';
+        document.querySelector('.bold').style.backgroundColor='lightgreen'
+        document.querySelector('.rbold').style.backgroundColor='lightcoral'
+      }
+      function ritalic(){
+        element.fontStyle="normal";
+        document.querySelector('.italic').style.backgroundColor='lightgreen'
+        document.querySelector('.ritalic').style.backgroundColor='lightcoral'
+      }
+      function runderline(){
+        element.textDecoration="none"; 
+        document.querySelector('.underline').style.backgroundColor='lightgreen'
+        document.querySelector('.runderline').style.backgroundColor='lightcoral'
+      }
+
+  </script>
+
+</body>
+</html>
